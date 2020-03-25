@@ -1,8 +1,6 @@
-# 다양한 디자인 패턴에 대해 공부하자(자바)
-
-## Builder Pattern 
-### 개요
-기존에 VO(Value Object)들을 생성할 때 아래와 같은 코드르 사용했었다.
+# Builder Pattern 
+## Background
+기존에 VO(Value Object)들을 생성할 때 아래와 같은 코드를 사용했었다.
 ```java
 // ExampleVO.java
 public class ExampleVO
@@ -53,6 +51,7 @@ public class Main
 이를 해결하기 위해서 **Builder** 패턴이라는 개념이 등장하게 되었다.
 위 경우를 빌더 패턴을 적용해 보았다.
 
+## Usage
 ```java
 // ExampleMultipleAttributeVO.java
 public class ExampleMultipleAttributeVO
@@ -98,6 +97,7 @@ public class Main
   }
 }
 ```
+## Conclusion
 ```diff
 # 뭔가 코드가 늘어난건 기분 탓 인가...?
 ```
