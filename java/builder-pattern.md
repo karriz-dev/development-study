@@ -3,7 +3,7 @@
 ## Builder Pattern 
 ### 개요
 기존에 VO(Value Object)들을 생성할 때 아래와 같은 코드르 사용했었다.
-'''
+```
 // ExampleVO.java
 public class ExampleVO
 {
@@ -21,11 +21,11 @@ public class Main
     ExampleVO vo = new ExampleVO(55);
   }
 }
-'''
+```
 
 위 코드르 보면 별로 문제가 될 사항이 보이지 않는다.
 아래와 같이 속성 값이 여러개인 경우를 한번 보자
-'''
+```
 // ExampleMultipleAttributeVO.java
 public class ExampleMultipleAttributeVO
 {
@@ -45,7 +45,7 @@ public class Main
     ExampleMultipleAttributeVO vo = new ExampleMultipleAttributeVO(10,"example title");
   }
 }
-'''
+```
 
 위 경우 처럼 속성 값이 여러개인 경우에는 생성자의 함수 순서를 고정으로 해야하고 무조건 Argument의 값을 설정해줘야만 한다.
 **Java의 경우엔 Argument의 초기 값 설정이 불가능**
@@ -53,7 +53,7 @@ public class Main
 이를 해결하기 위해서 **Builder** 패턴이라는 개념이 등장하게 되었다.
 위 경우를 빌더 패턴을 적용해 보았다.
 
-'''
+```
 // ExampleMultipleAttributeVO.java
 public class ExampleMultipleAttributeVO
 {
@@ -97,7 +97,7 @@ public class Main
                                                                        .setTitle("Builder Pattern Awesome !!").build();
   }
 }
-'''
+```
 
 <p style="color:'#c0c0c0'">뭔가 코드가 늘어난건 기분 탓 인가...?</p>
 
