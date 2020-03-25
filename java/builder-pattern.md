@@ -3,7 +3,7 @@
 ## Builder Pattern 
 ### 개요
 기존에 VO(Value Object)들을 생성할 때 아래와 같은 코드르 사용했었다.
-```
+```java
 // ExampleVO.java
 public class ExampleVO
 {
@@ -25,7 +25,7 @@ public class Main
 
 위 코드르 보면 별로 문제가 될 사항이 보이지 않는다.
 아래와 같이 속성 값이 여러개인 경우를 한번 보자
-```
+```java
 // ExampleMultipleAttributeVO.java
 public class ExampleMultipleAttributeVO
 {
@@ -53,7 +53,7 @@ public class Main
 이를 해결하기 위해서 **Builder** 패턴이라는 개념이 등장하게 되었다.
 위 경우를 빌더 패턴을 적용해 보았다.
 
-```
+```java
 // ExampleMultipleAttributeVO.java
 public class ExampleMultipleAttributeVO
 {
@@ -98,8 +98,11 @@ public class Main
   }
 }
 ```
+```diff
+# 뭔가 코드가 늘어난건 기분 탓 인가...?
+```
+코드의 량은 거의 2배 정도 늘어났다.. 
 
-<p style="color:'#c0c0c0'">뭔가 코드가 늘어난건 기분 탓 인가...?</p>
+근데 Main의 저 아름다운 자태를 보면 그정도의 수고로움은 충분히 감내할 수 있을 거 같다.
 
-코드의 량은 거의 2배 정도 늘어났다.. 근데 Main의 저 아름다운 자태를 보면 그정도의 수고로움은 충분히 감내할 수 있을 거 같다.
 항상 자바 코드를 작성하며 재사용성을 중요시 생각하는 나의 경우에는 정말 필요한 패턴이라고 생각한다.
